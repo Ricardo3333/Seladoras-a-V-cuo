@@ -1,0 +1,155 @@
+/* Estilos globais */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos do cabeçalho */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F5AA6;
+    height: 100px;
+}
+
+.logo img {
+    width: 125px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos do conteúdo principal */
+.content, .pagode {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.music, .funk {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.music img, .funk img {
+    max-width: 100%;
+    height: auto;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.5;
+    flex: 1;
+    padding: 20px;
+}
+
+.pagode {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.funk {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.funk img {
+    max-width: 400px;
+    height: auto;
+}
+
+.pagode-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.pagode p {
+    font-size: 16px;
+    line-height: 1.5;
+    flex: 1;
+    padding: 20px;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 5%;
+    }
+
+    .content, .pagode {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .music {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para tornar o rodapé mais visível */
+footer {
+    background-color: white; /* Cor de fundo mais escura */
+    color: #fff; /* Cor do texto branca */
+    text-align: center;
+    padding: 30px 0;
+    position: relative; /* Adiciona position: relative para alinhar o título */
+}
+
+footer h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px; /* Aumenta o espaçamento entre os ícones */
+    display: inline-block; /* Adiciona display inline-block para alinhar as imagens horizontalmente */
+}
+
+footer img {
+    width: 30px; /* Diminui um pouco o tamanho das imagens do rodapé */
+    height: 30px;
+    margin: 15px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    vertical-align: middle; /* Alinha verticalmente as imagens no centro do texto */
+}
+
+/* Centraliza o título com flexbox */
+footer h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Define uma altura para o título para centralizá-lo verticalmente */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Efeito de hover mais robusto para as imagens no rodapé */
+footer a:hover img {
+    opacity: 0.8;
+    transform: scale(1.1); /* Aumenta um pouco mais o tamanho no hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
